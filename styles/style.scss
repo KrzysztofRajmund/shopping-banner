@@ -1,0 +1,474 @@
+@import "./variables";
+@import "./functions";
+
+
+
+
+html,body {
+    width:100%;
+    padding:0px;
+    margin:0px;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+}
+
+
+.btn{
+    transition: color 0.5s linear;
+    &:hover{
+        color:$primaryDarkText;
+    }
+}
+
+//top header | nav
+.vertical-long{ 
+    border:none;
+    border-left:1px solid $hrColor;
+    height: 150%;
+    width:1px;    
+    margin:0px 30px;
+    padding:0px;
+}
+
+.vertical-short{ 
+    border:none;
+    border-left:1px solid $hrColor;
+    height:100%;
+    width:1px;    
+    margin:0px 15px;
+    padding:0px;
+}
+
+.navbar-brand{
+    margin-top:50px;
+}
+
+.leftNavBarContent{
+    margin-top: 62px;
+}
+
+.telephone{
+    line-height: 0.85;
+    margin-right: 10px;
+}
+
+li a{
+   color: $primaryDarkText !important;
+   font-size: $fontSizeNavPrimary;
+   margin-left: 10px;
+}
+
+ul li:first-child{
+    margin-left: 50px;
+ }
+
+
+ nav .container-fluid{
+     padding-left: 160px;
+ }
+
+.shoppingBag{
+    position: absolute;
+    bottom: 22%;
+    right: 7%;
+    font-size: 10px;
+    margin-right:40px;
+    cursor: pointer;
+}
+
+.verification{
+    position: absolute;
+    bottom: 22%;
+    right: 12%;
+    font-size: 10px;
+    margin-right:40px;
+    cursor: pointer;
+}
+
+.personIcon{
+    position: absolute;
+    bottom: 22%;
+    right: 17%;
+    font-size: 10px;
+    margin-right:40px;
+    cursor: pointer;
+}
+
+ button.promotion{
+    @include buttonMain($buttonBorderRadius,$buttonbBoxShadow);
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: $fontSizeNavPrimary;
+}
+
+button.checkout{
+    @include buttonMain($buttonBorderRadius,$buttonbBoxShadow);
+    font-size: $fontSizeNavSecondary;
+}
+
+.helpContact div:first-child{
+    font-size: $fontSizeNavSecondary;
+    line-height: 0.85;
+}
+
+
+.helpContact div:last-child{
+    font-size: 24px;
+    font-weight: bolder;
+    color:$secondaryColor;
+}
+
+// jumbotron
+.jumbotron{
+    background: url('../assets/jumbotronImage.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position:relative;
+    margin-top: 80px;
+    color:$primaryBrightText;
+    .container h1:first-child{
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: $largeTitle;
+        line-height: auto;
+    }
+    
+    .paragraphContainer p:first-child{
+        margin-top: 30px;
+    }
+
+    .paragraphContainer p{
+        margin-bottom: 0px;
+        font-size: $fontSizeParagraph;
+        line-height: auto;
+        width:80%
+    }
+}
+
+//search bar
+.searchBarContainer{
+    position: absolute;
+    top:-40px;
+}
+
+.form {
+    display:flex;
+    position: relative;
+    flex-direction:row;
+    width:80%;
+    padding:0px 0px;
+    border:5px solid $secondaryColor;
+    border-left-style: none;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+input {
+    width:100%;
+    border:none;
+   padding: 20px 0px 20px 35px;
+   &::placeholder{
+       color:$primaryDarkText;
+       font-size: $fontSizeNavSecondary;
+   }
+
+}
+
+input#search{
+    background-image: url('../assets/searchIcon.svg');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    text-indent: 50px;
+    background-position: 15px 10px; 
+    background-color: $primaryColor;   
+}
+
+  .form button {
+      @include buttonMain($buttonBorderRadius,0);
+      font-size: $fontSizeNavSecondary;
+      font-weight: bold;
+      border:none;
+      padding: 5px 30px;
+      margin: 15px 0px;     
+      position: absolute;
+      right:10px;
+  }
+
+  .searchIcon{
+      display:none;
+  }
+
+  .dropdownButton{
+    @include buttonMain($buttonBorderRadius,0);
+    font-weight: bold;
+    margin: 0px;
+    border:none;
+    padding-right: 50px;
+    padding-left:5px;
+    opacity:1.0;
+    &:hover{
+      color:$primaryColor;
+    }
+  }
+
+  .btn:disabled{
+    opacity: 1.0;
+}
+
+ 
+  .burgerDropdownButton {
+    @include buttonMain($buttonBorderRadius,0);
+    margin: 0px;
+    border:none;
+    transition: background-color 0.5s linear;
+    &:hover{
+        background-color:$primaryDarkText;
+    }
+
+  }
+
+  .burgerDropdownButton img {
+    border:0.5px solid $primaryColor;
+    padding: 5px;
+  }
+
+  //media screen
+  @media screen and (max-width: 1750px){
+    .form {
+        width:75%;
+      }
+  }
+
+
+  @media screen and (max-width: 1550px){
+    .form {
+        width:60%;
+      }
+      nav .container-fluid{
+        padding-left: 10px;
+    }
+
+      .shoppingBag{
+        right: 0%;
+    }
+   .verification{
+        right: 5%;
+    }
+    
+   .personIcon{
+        right: 10%;
+    }
+  }
+
+  @media screen and (max-width: 1270px){
+ 
+    ul li:first-child,ul li a:first-child{
+        margin-left: 0px;
+     }
+
+   .shoppingBag{
+        right: 0%;
+    }
+  .verification{
+        right: 5%;
+    }
+    
+  .personIcon{
+        right: 10%;
+    }
+  }
+
+  @media screen and (max-width: 1199px){
+ .navbar-brand{
+     margin-left:5%;
+ }
+
+ .navbar-toggler{
+     margin-top: 50px;
+    margin-right: 5%;
+}
+
+    .nav-item{
+        margin-bottom:7px;
+    }
+
+    .helpContact{
+        margin-bottom:7px;
+    }
+    hr{
+        display:none
+    }
+
+    .telephone{
+        margin:8px 0px;
+    }
+
+.leftNavBarContent{
+    margin-top:0%;
+}
+
+    ul li:first-child{
+        margin-left: 0px;
+     }
+
+  .shoppingBag{
+        bottom:6%;
+        right:1.5%;
+    }
+    
+ .verification{ 
+        bottom: 26%;  
+        right:1.5%;
+    }
+    
+ .personIcon{ 
+        bottom: 46%;
+        right:1.5%;
+    }
+  }
+
+
+
+  @media screen and (max-width: 1065px){
+    .jumbotron{
+        .container h1:first-child{
+            margin-top: 30px;
+        }
+    
+        h1 {
+            font-size: 46px;
+        }
+        .paragraphContainer p:first-child{
+            margin-top: 10px;
+        }
+        
+        .paragraphContainer p{
+            width:100%;
+        }
+
+        .dropdownButton{
+            display: none;
+        }
+    
+        .form {
+            width:80%;
+          }
+    }
+  
+  }
+
+  @media screen and (max-width: 800px){
+ 
+    .jumbotron{
+        height:600px;
+
+        .container h1:first-child{
+            margin-top: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+        
+        .paragraphContainer p:first-child{
+            margin-top: 5px;
+        }
+    }
+      .searchBarContainer{
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+  }
+
+
+  @media screen and (max-width: 690px){
+ 
+    .jumbotron{
+        .container h1:first-child{
+            margin-top: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bolder;
+            letter-spacing: 0.2rem;
+        }
+                
+        .paragraphContainer p:last-child{
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+    }
+
+    input#search{
+        padding: 5px 5px 5px 5px;
+        background-image:none;
+        text-indent: 0px;
+        &::placeholder{
+            color:transparent;
+        }
+    }
+    .searchBarContainer{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .form button {
+        font-size:0px;
+        background-color: transparent;
+        padding: 10px 0px 10px 0px;
+        margin: 0px 0px;     
+    }
+    .searchIcon{
+        display:block;
+    }
+  }
+
+
+  @media screen and (max-width: 535px){
+ 
+    .jumbotron{
+          
+        .paragraphContainer p:first-child{
+            margin-top: 15px;
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+    }
+
+  }
+
+
+  @media screen and (max-width: 400px){
+ 
+    .jumbotron{
+
+        .form{
+            width:70%;
+        }
+
+        .container h1:first-child{
+            margin-top: 10px;
+            font-size: 32px;
+        }
+                
+        .paragraphContainer {
+           display: none;
+        }
+    }
+
+    .leftNavBarContent.justify-content-center{
+        justify-content: start!important;
+        margin-left:15px;
+    }
+
+    .leftNavBarContent.text-center{
+        text-align: start !important;
+    }
+
+  }

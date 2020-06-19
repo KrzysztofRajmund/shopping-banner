@@ -1,0 +1,9 @@
+@mixin buttonMain($borderRadius,$boxShadow){
+
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+
+    background-color: $secondaryColor;
+    color:$primaryBrightText;
+
+}

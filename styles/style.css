@@ -1,0 +1,465 @@
+html, body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+}
+
+.btn {
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+.btn:hover {
+  color: #595959;
+}
+
+.vertical-long {
+  border: none;
+  border-left: 1px solid #E5E5E5;
+  height: 150%;
+  width: 1px;
+  margin: 0px 30px;
+  padding: 0px;
+}
+
+.vertical-short {
+  border: none;
+  border-left: 1px solid #E5E5E5;
+  height: 100%;
+  width: 1px;
+  margin: 0px 15px;
+  padding: 0px;
+}
+
+.navbar-brand {
+  margin-top: 50px;
+}
+
+.leftNavBarContent {
+  margin-top: 62px;
+}
+
+.telephone {
+  line-height: 0.85;
+  margin-right: 10px;
+}
+
+li a {
+  color: #595959 !important;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+ul li:first-child {
+  margin-left: 50px;
+}
+
+nav .container-fluid {
+  padding-left: 160px;
+}
+
+.shoppingBag {
+  position: absolute;
+  bottom: 22%;
+  right: 7%;
+  font-size: 10px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.verification {
+  position: absolute;
+  bottom: 22%;
+  right: 12%;
+  font-size: 10px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.personIcon {
+  position: absolute;
+  bottom: 22%;
+  right: 17%;
+  font-size: 10px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+button.promotion {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #EA6464;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button.checkout {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #EA6464;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.helpContact div:first-child {
+  font-size: 14px;
+  line-height: 0.85;
+}
+
+.helpContact div:last-child {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #EA6464;
+}
+
+.jumbotron {
+  background: url("../assets/jumbotronImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  margin-top: 80px;
+  color: #FFFFFF;
+}
+
+.jumbotron .container h1:first-child {
+  margin-top: 50px;
+}
+
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: auto;
+}
+
+.jumbotron .paragraphContainer p:first-child {
+  margin-top: 30px;
+}
+
+.jumbotron .paragraphContainer p {
+  margin-bottom: 0px;
+  font-size: 18px;
+  line-height: auto;
+  width: 80%;
+}
+
+.searchBarContainer {
+  position: absolute;
+  top: -40px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  padding: 0px 0px;
+  border: 5px solid #EA6464;
+  border-left-style: none;
+  border-radius: 0px 5px 5px 0px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  padding: 20px 0px 20px 35px;
+}
+
+input::-webkit-input-placeholder {
+  color: #595959;
+  font-size: 14px;
+}
+
+input:-ms-input-placeholder {
+  color: #595959;
+  font-size: 14px;
+}
+
+input::-ms-input-placeholder {
+  color: #595959;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #595959;
+  font-size: 14px;
+}
+
+input#search {
+  background-image: url("../assets/searchIcon.svg");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  text-indent: 50px;
+  background-position: 15px 10px;
+  background-color: #FFFFFF;
+}
+
+.form button {
+  border-radius: 5px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  background-color: #EA6464;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 5px 30px;
+  margin: 15px 0px;
+  position: absolute;
+  right: 10px;
+}
+
+.searchIcon {
+  display: none;
+}
+
+.dropdownButton {
+  border-radius: 5px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  background-color: #EA6464;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin: 0px;
+  border: none;
+  padding-right: 50px;
+  padding-left: 5px;
+  opacity: 1.0;
+}
+
+.dropdownButton:hover {
+  color: #FFFFFF;
+}
+
+.btn:disabled {
+  opacity: 1.0;
+}
+
+.burgerDropdownButton {
+  border-radius: 5px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  background-color: #EA6464;
+  color: #FFFFFF;
+  margin: 0px;
+  border: none;
+  -webkit-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
+
+.burgerDropdownButton:hover {
+  background-color: #595959;
+}
+
+.burgerDropdownButton img {
+  border: 0.5px solid #FFFFFF;
+  padding: 5px;
+}
+
+@media screen and (max-width: 1750px) {
+  .form {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .form {
+    width: 60%;
+  }
+  nav .container-fluid {
+    padding-left: 10px;
+  }
+  .shoppingBag {
+    right: 0%;
+  }
+  .verification {
+    right: 5%;
+  }
+  .personIcon {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  ul li:first-child, ul li a:first-child {
+    margin-left: 0px;
+  }
+  .shoppingBag {
+    right: 0%;
+  }
+  .verification {
+    right: 5%;
+  }
+  .personIcon {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .navbar-brand {
+    margin-left: 5%;
+  }
+  .navbar-toggler {
+    margin-top: 50px;
+    margin-right: 5%;
+  }
+  .nav-item {
+    margin-bottom: 7px;
+  }
+  .helpContact {
+    margin-bottom: 7px;
+  }
+  hr {
+    display: none;
+  }
+  .telephone {
+    margin: 8px 0px;
+  }
+  .leftNavBarContent {
+    margin-top: 0%;
+  }
+  ul li:first-child {
+    margin-left: 0px;
+  }
+  .shoppingBag {
+    bottom: 6%;
+    right: 1.5%;
+  }
+  .verification {
+    bottom: 26%;
+    right: 1.5%;
+  }
+  .personIcon {
+    bottom: 46%;
+    right: 1.5%;
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .jumbotron .container h1:first-child {
+    margin-top: 30px;
+  }
+  .jumbotron h1 {
+    font-size: 46px;
+  }
+  .jumbotron .paragraphContainer p:first-child {
+    margin-top: 10px;
+  }
+  .jumbotron .paragraphContainer p {
+    width: 100%;
+  }
+  .jumbotron .dropdownButton {
+    display: none;
+  }
+  .jumbotron .form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .jumbotron {
+    height: 600px;
+  }
+  .jumbotron .container h1:first-child {
+    margin-top: 10px;
+  }
+  .jumbotron h1 {
+    font-size: 32px;
+  }
+  .jumbotron .paragraphContainer p:first-child {
+    margin-top: 5px;
+  }
+  .searchBarContainer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .jumbotron .container h1:first-child {
+    margin-top: 10px;
+  }
+  .jumbotron h1 {
+    font-size: 24px;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+  }
+  .jumbotron .paragraphContainer p:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  input#search {
+    padding: 5px 5px 5px 5px;
+    background-image: none;
+    text-indent: 0px;
+  }
+  input#search::-webkit-input-placeholder {
+    color: transparent;
+  }
+  input#search:-ms-input-placeholder {
+    color: transparent;
+  }
+  input#search::-ms-input-placeholder {
+    color: transparent;
+  }
+  input#search::placeholder {
+    color: transparent;
+  }
+  .searchBarContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form button {
+    font-size: 0px;
+    background-color: transparent;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px;
+  }
+  .searchIcon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .jumbotron .paragraphContainer p:first-child {
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .jumbotron .form {
+    width: 70%;
+  }
+  .jumbotron .container h1:first-child {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+  .jumbotron .paragraphContainer {
+    display: none;
+  }
+  .leftNavBarContent.justify-content-center {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+    margin-left: 15px;
+  }
+  .leftNavBarContent.text-center {
+    text-align: start !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

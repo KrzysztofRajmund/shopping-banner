@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Banner with HTML and SASS Krzysztof Nadłonek</title>
+</head>
+
+<body>
+
+    <!-- header component -->
+    <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container-fluid col-12">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/avatar.svg" width="113" height="100" alt="avatar" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div class="leftNavBarContent d-flex justify-content-center text-center">
+                    <div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">O Nas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Aktualności</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Koszt dostawy</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="promotion btn" type="submit">Promocje</button>
+                            </li>
+                            <div>
+                                <hr class="vertical-long">
+                            </div>
+                            <li class="nav-item">
+                                <img class="telephone" src="./assets/telephone.svg" width="50" height="40"
+                                    alt="telephone" loading="lazy">
+                            </li>
+
+
+                            <div class="helpContact">
+                                <div>Pomoc w zakupach:</div>
+                                <div>94 375 3821</div>
+                            </div>
+
+                            <div>
+                                <hr class="vertical-short">
+                            </div>
+                            <li class="nav-item">
+                                <button class=" checkout btn" type="submit">Odwiedż nas</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iconsRow">
+                    <div>
+                        <div>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <img class="personIcon" src="./assets/personIcon.svg" width="auto" height="45"
+                                            alt="personIcon" loading="lazy">
+                                    </li>
+                                    <li class="nav-item">
+                                        <img class="verification" src="./assets/verification.svg" width="auto" height="45"
+                                            alt="verification" loading="lazy"><span
+                                            class=" verification badge badge-pill badge-danger">99</span></img>
+                                    </li>
+                                    <li class="nav-item">
+                                        <img class="shoppingBag" src="./assets/shoppingBag.svg" width="auto" height="45"
+                                            alt="shoppingBag" loading="lazy"><span
+                                            class=" shoppingBag badge badge-pill badge-danger">99</span></img>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <!-- search bar -->
+        <div class="container-fluid searchBarContainer col-12">
+            <div class="input-group d-flex justify-content-center">
+                <div class="input-group-prepend">
+                    <button type="button" class="burgerDropdownButton btn dropdown-toggle-split"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="burger" src="./assets/burger.svg" width="50" height="50" alt="burger"
+                            loading="lazy">
+                    </button>
+                    <button class="dropdownButton btn" type="button" disabled>Kategorie produktów</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Art.spożywcze</a>
+                        <a class="dropdown-item" href="#">Nabiał</a>
+                        <a class="dropdown-item" href="#">Do kuchni</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Nowe produkty</a>
+                    </div>
+                </div>
+                <div class="form">
+                    <input type="text" id="search" onchange="hideSearchIcon(this);"
+                        aria-label="Text input with dropdown button" placeholder="Wpisz czego szukasz">
+                    <button class="btn" type="button">Szukaj <img class="searchIcon" src='./assets/searchIcon.svg'
+                            width="30" height="30" alt="searchIcon" loading="lazy"></button>
+                </div>
+            </div>
+        </div>
+        <!-- jumbotron container -->
+        <div class="container">
+            <h1>Twój nowy sklep</h1>
+            <h1>Sellingo.pl</h1>
+            <div class="paragraphContainer">
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames senectus sed in feugiat
+                    tincidunt nec turpis dis sagittis.
+                    Venenatis fusce eleifend egestas pulvinar pharetra, augue.</p>
+                <p class="lead">Felis, suspendisse viverra senectus orci nisl fermentum
+                    nunc nunc. Donec tempus, hendrerit nisi vestibulum, est, interdum cursus habitant est.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function hideSearchIcon(prop) {
+            prop.style.backgroundImage = 'none';
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
