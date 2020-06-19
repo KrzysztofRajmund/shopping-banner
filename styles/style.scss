@@ -420,12 +420,19 @@ input#search{
       .form button {
         font-size:0px;
         background-color: transparent;
-        padding: 10px 0px 10px 0px;
+        padding: 10px 10px 12px 10px;
         margin: 0px 0px;     
     }
     .searchIcon{
         display:block;
     }
+.searchButtonIcon img{
+    transition: transform 0.3s linear;
+    &:hover{
+        transform:scale(1.2);
+    }
+}
+
   }
 
 

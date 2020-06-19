@@ -424,11 +424,21 @@ input#search {
   .form button {
     font-size: 0px;
     background-color: transparent;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 10px 12px 10px;
     margin: 0px 0px;
   }
   .searchIcon {
     display: block;
+  }
+  .searchButtonIcon img {
+    -webkit-transition: -webkit-transform 0.3s linear;
+    transition: -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear;
+    transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  }
+  .searchButtonIcon img:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 

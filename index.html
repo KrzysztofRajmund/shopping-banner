@@ -112,7 +112,7 @@
                 <div class="form">
                     <input type="text" id="search" onchange="hideSearchIcon(this);"
                         aria-label="Text input with dropdown button" placeholder="Wpisz czego szukasz">
-                    <button class="btn" type="button">Szukaj <img class="searchIcon" src='./assets/searchIcon.svg'
+                    <button onclick="handleButtonClick(this);" class="btn" type="button">Szukaj <img class="searchIcon" src='./assets/searchIcon.svg'
                             width="30" height="30" alt="searchIcon" loading="lazy"></button>
                 </div>
             </div>
@@ -134,6 +134,10 @@
     <script>
         function hideSearchIcon(prop) {
             prop.style.backgroundImage = 'none';
+        }
+
+        function handleButtonClick(prop) {
+            prop.classList.add("searchButtonIcon");
         }
     </script>
 
