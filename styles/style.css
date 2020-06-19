@@ -3,7 +3,14 @@ html, body {
   padding: 0px;
   margin: 0px;
   font-family: 'Ubuntu', sans-serif;
-  font-style: normal;
+  font-weight: normal;
+  background-color: #FFFFFF;
+  color: #595959;
+}
+
+.topLine {
+  border: 2px solid #EA6464;
+  width: 100vw;
 }
 
 .btn {
@@ -34,16 +41,16 @@ html, body {
 }
 
 .navbar-brand {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .leftNavBarContent {
-  margin-top: 62px;
+  margin-top: 30px;
 }
 
 .telephone {
-  line-height: 0.85;
   margin-right: 10px;
+  margin-top: 3px;
 }
 
 li a {
@@ -62,8 +69,8 @@ nav .container-fluid {
 
 .shoppingBag {
   position: absolute;
-  bottom: 22%;
-  right: 7%;
+  bottom: 24%;
+  right: 8%;
   font-size: 10px;
   margin-right: 40px;
   cursor: pointer;
@@ -71,8 +78,8 @@ nav .container-fluid {
 
 .verification {
   position: absolute;
-  bottom: 22%;
-  right: 12%;
+  bottom: 24%;
+  right: 13%;
   font-size: 10px;
   margin-right: 40px;
   cursor: pointer;
@@ -80,8 +87,8 @@ nav .container-fluid {
 
 .personIcon {
   position: absolute;
-  bottom: 22%;
-  right: 17%;
+  bottom: 24%;
+  right: 18%;
   font-size: 10px;
   margin-right: 40px;
   cursor: pointer;
@@ -97,6 +104,7 @@ button.promotion {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-left: 10px;
   margin-right: 10px;
+  padding: 10px 30px 10px 30px;
   font-size: 16px;
 }
 
@@ -107,17 +115,23 @@ button.checkout {
   background-color: #EA6464;
   color: #FFFFFF;
   font-size: 14px;
+  margin-top: 7px;
+}
+
+.helpContact {
+  padding-top: 5px;
 }
 
 .helpContact div:first-child {
+  color: #595959;
   font-size: 14px;
   line-height: 0.85;
 }
 
 .helpContact div:last-child {
+  color: #EA6464;
   font-size: 24px;
   font-weight: bolder;
-  color: #EA6464;
 }
 
 .carousel {
@@ -132,6 +146,7 @@ button.checkout {
 }
 
 .carousel-caption p {
+  font-weight: normal;
   font-size: 18px;
   line-height: 2rem;
   margin: 0px;
@@ -141,7 +156,12 @@ button.checkout {
   padding-top: 35px;
 }
 
-h1 {
+.carousel-caption p:last-child {
+  padding-bottom: 40px;
+}
+
+.carousel-caption h1 {
+  font-weight: normal;
   font-size: 72px;
   line-height: auto;
 }
@@ -150,8 +170,8 @@ h1 {
   position: absolute;
   top: -40px;
   z-index: 10;
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 122px;
+  padding-right: 200px;
 }
 
 .form {
@@ -163,7 +183,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 80%;
+  width: 75%;
   padding: 0px 0px;
   border: 5px solid #EA6464;
   border-left-style: none;
@@ -196,7 +216,16 @@ input::placeholder {
   font-size: 14px;
 }
 
-input#search {
+.search {
+  background-image: url("../assets/searchIcon.svg");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  text-indent: 50px;
+  background-position: 15px 10px;
+  background-color: #FFFFFF;
+}
+
+.searchInputClick {
   background-image: url("../assets/searchIcon.svg");
   background-size: 40px 40px;
   background-repeat: no-repeat;
@@ -211,7 +240,7 @@ input#search {
           box-shadow: 0;
   background-color: #EA6464;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   padding: 5px 30px;
@@ -230,7 +259,8 @@ input#search {
           box-shadow: 0;
   background-color: #EA6464;
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 18px;
   margin: 0px;
   border: none;
   padding-right: 50px;
@@ -267,20 +297,14 @@ input#search {
   padding: 5px;
 }
 
-@media screen and (max-width: 1750px) {
-  .form {
-    width: 75%;
-  }
-}
-
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1900px) {
   .searchBarContainer {
     padding-left: 80px;
     padding-right: 80px;
   }
-  .form {
-    width: 60%;
-  }
+}
+
+@media screen and (max-width: 1620px) {
   nav .container-fluid {
     padding-left: 10px;
   }
@@ -293,8 +317,18 @@ input#search {
   .personIcon {
     right: 10%;
   }
+  .searchBarContainer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .form {
+    width: 60%;
+  }
   .carousel-caption p:first-of-type {
     padding-top: 15px;
+  }
+  .carousel-caption p:last-child {
+    padding-bottom: 0px;
   }
   .carousel-caption {
     width: 65%;
@@ -306,13 +340,13 @@ input#search {
     margin-left: 0px;
   }
   .shoppingBag {
-    right: 0%;
+    right: -2%;
   }
   .verification {
-    right: 5%;
+    right: 3%;
   }
   .personIcon {
-    right: 10%;
+    right: 8%;
   }
   .carousel-caption h1 {
     font-size: 46px;
@@ -320,25 +354,23 @@ input#search {
 }
 
 @media screen and (max-width: 1199px) {
-  button.promotion {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .carousel {
-    margin-top: 80px;
-  }
   .navbar-brand {
     margin-left: 5%;
   }
   .navbar-toggler {
-    margin-top: 50px;
-    margin-right: 5%;
+    margin-top: 15px;
+    margin-right: 5.5%;
+    padding: 12px;
   }
   .nav-item {
     margin-bottom: 7px;
   }
   .helpContact {
     margin-bottom: 7px;
+  }
+  button.promotion {
+    margin-left: 0px;
+    margin-right: 0px;
   }
   hr {
     display: none;
@@ -353,16 +385,19 @@ input#search {
     margin-left: 0px;
   }
   .shoppingBag {
-    bottom: 6%;
+    bottom: 16%;
     right: 1.5%;
   }
   .verification {
-    bottom: 26%;
+    bottom: 36%;
     right: 1.5%;
   }
   .personIcon {
-    bottom: 46%;
+    bottom: 56%;
     right: 1.5%;
+  }
+  .carousel {
+    margin-top: 80px;
   }
   .carousel-caption {
     padding-bottom: 0px;
@@ -412,21 +447,21 @@ input#search {
 }
 
 @media screen and (max-width: 830px) {
-  input#search {
+  .search {
     padding: 5px 5px 5px 5px;
     background-image: none;
     text-indent: 0px;
   }
-  input#search::-webkit-input-placeholder {
+  .search::-webkit-input-placeholder {
     color: transparent;
   }
-  input#search:-ms-input-placeholder {
+  .search:-ms-input-placeholder {
     color: transparent;
   }
-  input#search::-ms-input-placeholder {
+  .search::-ms-input-placeholder {
     color: transparent;
   }
-  input#search::placeholder {
+  .search::placeholder {
     color: transparent;
   }
   .searchBarContainer {
@@ -461,6 +496,10 @@ input#search {
 }
 
 @media screen and (max-width: 710px) {
+  .carousel-caption {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
   .carousel-caption p:first-of-type {
     white-space: nowrap;
     overflow: hidden;
@@ -468,39 +507,40 @@ input#search {
     padding-top: 0px;
     line-height: 1.2rem;
   }
-  .carousel-caption {
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
 }
 
 @media screen and (max-width: 470px) {
-  .carousel-caption p {
-    display: none;
-  }
-  .form {
-    width: 70%;
-  }
-  .carousel-caption {
-    padding-left: 15px;
-    padding-bottom: 0px;
-    text-align: center;
-  }
-  .carousel-caption h1:first-child {
-    font-size: 20px;
-  }
-  .carousel-caption h1:last-of-type {
-    font-size: 16px;
-    padding-bottom: 0px;
+  .navbar-toggler {
+    margin-right: 10%;
   }
   .leftNavBarContent.justify-content-center {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
             justify-content: start !important;
-    margin-left: 15px;
+    margin-left: 22px;
   }
   .leftNavBarContent.text-center {
     text-align: start !important;
+  }
+  .form {
+    width: 70%;
+  }
+  .carousel-caption p {
+    display: none;
+  }
+  .carousel-caption {
+    padding-left: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+  .carousel-caption h1:first-child {
+    font-size: 20px;
+    padding-left: 25px;
+  }
+  .carousel-caption h1:last-of-type {
+    font-size: 16px;
+    padding-bottom: 0px;
+    padding-left: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

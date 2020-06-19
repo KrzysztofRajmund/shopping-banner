@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
@@ -14,6 +14,7 @@
 <body>
 
     <!-- header component -->
+    <div class="topLine"></div>
     <nav class="navbar navbar-expand-xl navbar-light">
         <div class="container-fluid col-12">
             <a class="navbar-brand" href="#">
@@ -106,10 +107,10 @@
                     </div>
                 </div>
                 <div class="form">
-                    <input type="text" id="search" onkeydown="hideSearchIcon(this);" 
-                        aria-label="Text input with dropdown button" placeholder="Wpisz czego szukasz">
-                    <button  onclick="handleButtonClick(this);" class="btn" id="searchButton" type="button">Szukaj <img onclick="handleImageClick(this);" class="searchIcon"
-                            src='./assets/searchIcon.svg' width="30" height="30" alt="searchIcon"
+                    <input type="text" class="search" id="search" aria-label="Text input with dropdown button"
+                        placeholder="Wpisz czego szukasz">
+                    <button class="btn" id="searchButton" type="button">Szukaj <img onclick="handleImageClick(this);"
+                            class="searchIcon" src='./assets/searchIcon.svg' width="30" height="30" alt="searchIcon"
                             loading="lazy"></button>
                 </div>
             </div>
@@ -151,21 +152,6 @@
     </div>
 
     <script>
-        function hideSearchIcon(prop) {
-            prop.style.backgroundImage = 'none';
-        }
-
-            var input = document.getElementById("search");
-            input.addEventListener("keyup", function (e) {
-                if (e.keyCode === 13) {
-                    e.preventDefault();
-                    document.getElementById("searchButton").click();
-                }
-            });
-
-            function handleButtonClick(e) {
-                e.style.backgroundImage = "url('./assets/searchIcon.svg'";
-            }
 
         function handleImageClick(prop) {
             prop.classList.add("searchButtonIcon");
