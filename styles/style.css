@@ -120,38 +120,38 @@ button.checkout {
   color: #EA6464;
 }
 
-.jumbotron {
-  background: url("../assets/jumbotronImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  position: relative;
-  margin-top: 80px;
+.carousel {
+  margin-top: 60px;
+}
+
+.carousel-caption {
+  width: 50%;
+  text-align: start;
   color: #FFFFFF;
+  z-index: 0;
 }
 
-.jumbotron .container h1:first-child {
-  margin-top: 50px;
+.carousel-caption p {
+  font-size: 18px;
+  line-height: 2rem;
+  margin: 0px;
 }
 
-.jumbotron h1 {
+.carousel-caption p:first-of-type {
+  padding-top: 35px;
+}
+
+h1 {
   font-size: 72px;
   line-height: auto;
-}
-
-.jumbotron .paragraphContainer p:first-child {
-  margin-top: 30px;
-}
-
-.jumbotron .paragraphContainer p {
-  margin-bottom: 0px;
-  font-size: 18px;
-  line-height: auto;
-  width: 80%;
 }
 
 .searchBarContainer {
   position: absolute;
   top: -40px;
+  z-index: 10;
+  padding-left: 125px;
+  padding-right: 125px;
 }
 
 .form {
@@ -274,6 +274,10 @@ input#search {
 }
 
 @media screen and (max-width: 1550px) {
+  .searchBarContainer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
   .form {
     width: 60%;
   }
@@ -289,9 +293,15 @@ input#search {
   .personIcon {
     right: 10%;
   }
+  .carousel-caption p:first-of-type {
+    padding-top: 15px;
+  }
+  .carousel-caption {
+    width: 65%;
+  }
 }
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1350px) {
   ul li:first-child, ul li a:first-child {
     margin-left: 0px;
   }
@@ -304,9 +314,19 @@ input#search {
   .personIcon {
     right: 10%;
   }
+  .carousel-caption h1 {
+    font-size: 46px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
+  button.promotion {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .carousel {
+    margin-top: 80px;
+  }
   .navbar-brand {
     margin-left: 5%;
   }
@@ -344,62 +364,54 @@ input#search {
     bottom: 46%;
     right: 1.5%;
   }
+  .carousel-caption {
+    padding-bottom: 0px;
+    width: 75%;
+  }
+  .carousel-caption p:first-of-type {
+    padding-top: 0px;
+  }
 }
 
 @media screen and (max-width: 1065px) {
-  .jumbotron .container h1:first-child {
-    margin-top: 30px;
-  }
-  .jumbotron h1 {
-    font-size: 46px;
-  }
-  .jumbotron .paragraphContainer p:first-child {
-    margin-top: 10px;
-  }
-  .jumbotron .paragraphContainer p {
-    width: 100%;
-  }
-  .jumbotron .dropdownButton {
+  .dropdownButton {
     display: none;
   }
-  .jumbotron .form {
+  .form {
     width: 80%;
   }
-}
-
-@media screen and (max-width: 800px) {
-  .jumbotron {
-    height: 600px;
+  .carousel-caption {
+    width: 80%;
+    left: 6.5%;
+    padding-left: 70px;
   }
-  .jumbotron .container h1:first-child {
-    margin-top: 10px;
-  }
-  .jumbotron h1 {
+  .carousel-caption h1 {
     font-size: 32px;
   }
-  .jumbotron .paragraphContainer p:first-child {
-    margin-top: 5px;
+  .carousel-caption p {
+    margin-bottom: 0px;
+    font-size: 14px;
   }
-  .searchBarContainer {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-}
-
-@media screen and (max-width: 690px) {
-  .jumbotron .container h1:first-child {
-    margin-top: 10px;
-  }
-  .jumbotron h1 {
-    font-size: 24px;
-    font-weight: bolder;
-    letter-spacing: 0.2rem;
-  }
-  .jumbotron .paragraphContainer p:last-child {
+  .carousel-caption p:last-child {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+@media screen and (max-width: 860px) {
+  .searchBarContainer {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .carousel-caption h1 {
+    font-size: 24px;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
   input#search {
     padding: 5px 5px 5px 5px;
     background-image: none;
@@ -430,37 +442,56 @@ input#search {
   .searchIcon {
     display: block;
   }
-  .searchButtonIcon img {
+  .searchButtonIcon {
     -webkit-transition: -webkit-transform 0.3s linear;
     transition: -webkit-transform 0.3s linear;
     transition: transform 0.3s linear;
     transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   }
-  .searchButtonIcon img:hover {
+  .searchButtonIcon:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }
+  .carousel-caption h1:last-of-type {
+    margin-bottom: 0px;
+  }
+  .carousel-caption p:last-child {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 535px) {
-  .jumbotron .paragraphContainer p:first-child {
-    margin-top: 15px;
+@media screen and (max-width: 710px) {
+  .carousel-caption p:first-of-type {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-top: 0px;
+    line-height: 1.2rem;
+  }
+  .carousel-caption {
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .jumbotron .form {
+@media screen and (max-width: 470px) {
+  .carousel-caption p {
+    display: none;
+  }
+  .form {
     width: 70%;
   }
-  .jumbotron .container h1:first-child {
-    margin-top: 10px;
-    font-size: 32px;
+  .carousel-caption {
+    padding-left: 15px;
+    padding-bottom: 0px;
+    text-align: center;
   }
-  .jumbotron .paragraphContainer {
-    display: none;
+  .carousel-caption h1:first-child {
+    font-size: 20px;
+  }
+  .carousel-caption h1:last-of-type {
+    font-size: 16px;
+    padding-bottom: 0px;
   }
   .leftNavBarContent.justify-content-center {
     -webkit-box-pack: start !important;

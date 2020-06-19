@@ -47,13 +47,10 @@
                                 <img class="telephone" src="./assets/telephone.svg" width="50" height="40"
                                     alt="telephone" loading="lazy">
                             </li>
-
-
                             <div class="helpContact">
                                 <div>Pomoc w zakupach:</div>
                                 <div>94 375 3821</div>
                             </div>
-
                             <div>
                                 <hr class="vertical-short">
                             </div>
@@ -66,22 +63,22 @@
                 <div class="iconsRow">
                     <div>
                         <div>
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <img class="personIcon" src="./assets/personIcon.svg" width="auto" height="45"
-                                            alt="personIcon" loading="lazy">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img class="verification" src="./assets/verification.svg" width="auto" height="45"
-                                            alt="verification" loading="lazy"><span
-                                            class=" verification badge badge-pill badge-danger">99</span></img>
-                                    </li>
-                                    <li class="nav-item">
-                                        <img class="shoppingBag" src="./assets/shoppingBag.svg" width="auto" height="45"
-                                            alt="shoppingBag" loading="lazy"><span
-                                            class=" shoppingBag badge badge-pill badge-danger">99</span></img>
-                                    </li>
-                                </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <img class="personIcon" src="./assets/personIcon.svg" width="auto" height="45"
+                                        alt="personIcon" loading="lazy">
+                                </li>
+                                <li class="nav-item">
+                                    <img class="verification" src="./assets/verification.svg" width="auto" height="45"
+                                        alt="verification" loading="lazy"><span
+                                        class=" verification badge badge-pill badge-danger">99</span></img>
+                                </li>
+                                <li class="nav-item">
+                                    <img class="shoppingBag" src="./assets/shoppingBag.svg" width="auto" height="45"
+                                        alt="shoppingBag" loading="lazy"><span
+                                        class=" shoppingBag badge badge-pill badge-danger">99</span></img>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -89,14 +86,13 @@
         </div>
     </nav>
 
-
-    <div class="jumbotron jumbotron-fluid">
-        <!-- search bar -->
+    <!-- slider -->
+    <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
         <div class="container-fluid searchBarContainer col-12">
             <div class="input-group d-flex justify-content-center">
                 <div class="input-group-prepend">
-                    <button type="button" class="burgerDropdownButton btn dropdown-toggle-split"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="burgerDropdownButton btn dropdown-toggle-split" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <img class="burger" src="./assets/burger.svg" width="50" height="50" alt="burger"
                             loading="lazy">
                     </button>
@@ -110,23 +106,46 @@
                     </div>
                 </div>
                 <div class="form">
-                    <input type="text" id="search" onchange="hideSearchIcon(this);"
+                    <input type="text" id="search" onkeydown="hideSearchIcon(this);" 
                         aria-label="Text input with dropdown button" placeholder="Wpisz czego szukasz">
-                    <button onclick="handleButtonClick(this);" class="btn" type="button">Szukaj <img class="searchIcon" src='./assets/searchIcon.svg'
-                            width="30" height="30" alt="searchIcon" loading="lazy"></button>
+                    <button  onclick="handleButtonClick(this);" class="btn" id="searchButton" type="button">Szukaj <img onclick="handleImageClick(this);" class="searchIcon"
+                            src='./assets/searchIcon.svg' width="30" height="30" alt="searchIcon"
+                            loading="lazy"></button>
                 </div>
             </div>
         </div>
-        <!-- jumbotron container -->
-        <div class="container">
-            <h1>Twój nowy sklep</h1>
-            <h1>Sellingo.pl</h1>
-            <div class="paragraphContainer">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames senectus sed in feugiat
-                    tincidunt nec turpis dis sagittis.
-                    Venenatis fusce eleifend egestas pulvinar pharetra, augue.</p>
-                <p class="lead">Felis, suspendisse viverra senectus orci nisl fermentum
-                    nunc nunc. Donec tempus, hendrerit nisi vestibulum, est, interdum cursus habitant est.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/jumbotronImage.png" class="d-block w-100" alt="jumbotronImage">
+
+                <div class="carousel-caption ">
+                    <h1>Twój nowy sklep</h1>
+                    <h1>Sellingo.pl</h1>
+
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames senectus sed in
+                        feugiat
+                        tincidunt nec turpis dis sagittis.
+                        Venenatis fusce eleifend egestas pulvinar pharetra, augue.</p>
+                    <p class="lead">Felis, suspendisse viverra senectus orci nisl fermentum
+                        nunc nunc. Donec tempus, hendrerit nisi vestibulum, est, interdum cursus habitant est.</p>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/jumbotronImage.png" class="d-block w-100" alt="jumbotronImage">
+
+                <div class="carousel-caption ">
+                    <h1>Twój nowy sklep</h1>
+                    <h1>Sellingo.pl</h1>
+
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames senectus sed in
+                        feugiat
+                        tincidunt nec turpis dis sagittis.
+                        Venenatis fusce eleifend egestas pulvinar pharetra, augue.</p>
+                    <p class="lead">Felis, suspendisse viverra senectus orci nisl fermentum
+                        nunc nunc. Donec tempus, hendrerit nisi vestibulum, est, interdum cursus habitant est.</p>
+
+                </div>
             </div>
         </div>
     </div>
@@ -136,7 +155,19 @@
             prop.style.backgroundImage = 'none';
         }
 
-        function handleButtonClick(prop) {
+            var input = document.getElementById("search");
+            input.addEventListener("keyup", function (e) {
+                if (e.keyCode === 13) {
+                    e.preventDefault();
+                    document.getElementById("searchButton").click();
+                }
+            });
+
+            function handleButtonClick(e) {
+                e.style.backgroundImage = "url('./assets/searchIcon.svg'";
+            }
+
+        function handleImageClick(prop) {
             prop.classList.add("searchButtonIcon");
         }
     </script>
